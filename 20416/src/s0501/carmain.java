@@ -25,7 +25,7 @@ public class carmain {
 		yourCar.printCarInfo();
 		yourCar.speedUp();
 		
-		Student s = new Student();
+		Student s = new Student(); 
 	}
 
 }
