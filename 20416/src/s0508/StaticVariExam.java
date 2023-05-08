@@ -10,7 +10,6 @@ public class StaticVariExam {
 		System.out.println(jang.SchoolName + "학생 객체 수는 " + Student.count + "입니다.");
 		Student bak = new Student();
 		System.out.println(bak.SchoolName + "학생 객체 수는 " + Student.count + "입니다.");
-		System.out.println(PI);
 	}
 
 }
