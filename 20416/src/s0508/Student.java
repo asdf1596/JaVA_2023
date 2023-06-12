@@ -10,6 +10,9 @@ public class Student {
 	public Student() {
 		count++;
 	}
+	static int getcount() {
+		return count;
+	}
 	//이름을 저장
 	void setName(String n) {
 		name = n;

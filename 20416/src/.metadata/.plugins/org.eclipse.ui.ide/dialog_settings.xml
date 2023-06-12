@@ -5,5 +5,10 @@
 		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\java 20416\java 20416\src"/>
+			<item value="D:\java 20416\git\20416\src\s0508"/>
+			<item value="D:\java 20416\git\20416\src"/>
+		</list>
 	</section>
 </section>
