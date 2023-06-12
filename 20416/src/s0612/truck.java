@@ -4,3 +4,4 @@ public class truck extends car{
 	int ton;
 	
 }
+

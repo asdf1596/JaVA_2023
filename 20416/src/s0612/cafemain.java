@@ -14,5 +14,6 @@ public class cafemain {
 		c2.maketea(1, 2);
 		c2.maketea(3, 4, 2);
 		c2.printcount();
+		
 	}
 }

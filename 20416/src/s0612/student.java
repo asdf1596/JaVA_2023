@@ -17,7 +17,7 @@ public class student {
 	}
 	void eat() {
 		System.out.println(name + "은/는 먹는다.");
-	}
+	} 
 	void hit() {
 		System.out.println(name + "은/는 때린다.");
 	}
@@ -25,3 +25,6 @@ public class student {
 		System.out.println(name + "은/는 공부한다.");
 	}
 }
+
+
+ 

@@ -6,3 +6,4 @@ public class greeting {
 		System.out.println("씨 안녕하세요.");
 	}
 }
+ 

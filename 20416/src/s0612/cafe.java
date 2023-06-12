@@ -11,6 +11,7 @@ public class cafe {
 	}
 	void setcount(int count) {
 		this.count = count;
+		
 	}
 	
 	public void maketea(int coffee) {

@@ -18,3 +18,4 @@ public class leader extends student{
 		}
 	}
 }
+
