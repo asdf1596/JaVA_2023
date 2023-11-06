@@ -1,21 +1,26 @@
 package swingtalk;
 
 import java.awt.Color;
-import java.awt.Component;
+import java.awt.Font;
 import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
-public class AppMain extends JFrame{
+public class AppMain extends JFrame implements ActionListener{
 	JTextField txt_login;
 	JButton btn_login;
 	JLabel profile;
+	String userId;
+	
 	
 	public AppMain(){
 		setTitle("RobotChat Login");
@@ -52,10 +57,25 @@ public class AppMain extends JFrame{
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setVisible(true);
 		setBackground(Color.YELLOW);
+		
+		btn_login.addActionListener(this);
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		new AppMain();
 
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		if(e.getSource()==btn_login) {
+			String userId = txt_login.getText().trim();
+			if(userId.length()==0) {
+				JOptionPane.showMessageDialog(null, "아이디를 입력하세요");
+			}else {
+				new Chat(userId);
+				dispose();
+			}
+		}
 	}
 }
