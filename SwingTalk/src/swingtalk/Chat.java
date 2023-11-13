@@ -29,8 +29,8 @@ public class Chat extends JFrame implements ActionListener{
 	String userId;
 	JLabel userLabel;
 	private Component btn_imo;
-	private Component txtSend;
-	public Chat(String userid) {
+	private JTextArea txtSend;
+	public Chat(String userId) {
 		this.userId = userId;
 		setSize(320,620);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -65,7 +65,7 @@ public class Chat extends JFrame implements ActionListener{
 		txtSend = new JTextArea();
 		
 		txtSend.setBounds(4, 4, 200, 70);
-		((JTextArea) txtSend).setLineWrap(true);
+		txtSend.setLineWrap(true);
 		btn_imo = new JButton("♥");
 		btn_imo.setBounds(220,4,60,30);
 		jp_bottom.add(txtSend);
@@ -94,7 +94,7 @@ public class Chat extends JFrame implements ActionListener{
 				}
 			}
 			
-		})
+		});
 		
 	}
 	private void draw_chat_panel() {
