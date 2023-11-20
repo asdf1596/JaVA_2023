@@ -14,17 +14,23 @@ import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
+import javax.swing.JTextPane;
+import javax.swing.ScrollPaneConstants;
+import javax.swing.text.html.HTMLDocument;
 
 public class Chat extends JFrame implements ActionListener{
 	JMenuBar menuBar;
+	HTMLDocument doc;
 	JMenu menu;
 	JMenuItem menuItem[] = new JMenuItem[4];
 	String[] menuTitle = {"이름 변경", "배경 변경", "폰트 변경", "서버주소변경"};
 	JPanel jp_top, jp_bottom;
 	JScrollPane jp_chat;
+	JTextPane chatTextPane;
 	
 	String userId;
 	JLabel userLabel;
@@ -99,7 +105,14 @@ public class Chat extends JFrame implements ActionListener{
 	}
 	private void draw_chat_panel() {
 		// TODO Auto-generated method stub
+		jp_chat.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+		chatTextPane = new JTextPane();
+		chatTextPane.setBounds(0,0,400,300);
+		chatTextPane.setBackground(Color.pink);
 		
+		chatTextPane.setContentType("text/html");
+		doc = (HTMLDocument) chatTextPane.getStyledDocument();
+		jp_chat.setViewportView(chatTextPane);
 	}
 	private void draw_top_panel() {
 		// TODO Auto-generated method stub
@@ -118,6 +131,7 @@ public class Chat extends JFrame implements ActionListener{
 		
 		for (int i = 0; i< menuItem.length; i++) {
 			menuItem[i] = new JMenuItem(menuTitle[i]);
+			menuItem[i].addActionListener(this);
 			menu.add(menuItem[i]);
 		}
 		
@@ -129,7 +143,24 @@ public class Chat extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		
+		if(e.getSource() == menuItem[0]) {
+			userId = JOptionPane.showInputDialog("새 이름을 입력하세요");
+			if(userId.trim().length() != 0) {
+				System.out.println("이름변경:" + userId);
+				userLabel.setText(userId);
+			}
+		}
+		else if(e.getSource() == menuItem[1]) {
+			SelectRGB rgbDlg = new SelectRGB();
+			if(rgbDlg.changeColor)
+				chatTextPane.setBackground(rgbDlg.sample.getBackground());
+		}
+		else if(e.getSource() == menuItem[2]) {
+			
+		}
+		else if(e.getSource() == menuItem[3]) {
+			
+		}
 	}
 
 }
