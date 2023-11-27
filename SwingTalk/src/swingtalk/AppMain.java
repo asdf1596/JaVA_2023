@@ -21,7 +21,6 @@ public class AppMain extends JFrame implements ActionListener{
 	JLabel profile;
 	String userId;
 	
-	
 	public AppMain(){
 		setTitle("RobotChat Login");
 		setSize(320,600);
