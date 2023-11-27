@@ -26,6 +26,7 @@ public class AppMain extends JFrame implements ActionListener{
 		setTitle("RobotChat Login");
 		setSize(320,600);
 		
+		
 		JPanel panel = new JPanel();
 		panel.setLayout(null);
 		panel.setBackground(new Color(254,229,0));
