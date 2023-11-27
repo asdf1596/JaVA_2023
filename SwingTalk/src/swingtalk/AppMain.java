@@ -31,6 +31,7 @@ public class AppMain extends JFrame implements ActionListener{
 		panel.setLayout(null);
 		panel.setBackground(new Color(254,229,0));
 		
+		
 		txt_login = new JTextField("20416 지민철");
 		btn_login = new JButton("확인");
 		
